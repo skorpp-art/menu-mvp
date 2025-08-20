@@ -1,0 +1,142 @@
+:root {
+    --bg-color: #0d1b2a; /* Azul oscuro casi negro */
+    --primary-color: #1b263b; /* Azul más claro para tarjetas */
+    --secondary-color: #415a77; /* Azul grisáceo para acentos */
+    --text-color: #e0e1dd; /* Blanco roto para texto */
+    --accent-color: #ffc300; /* Amarillo para títulos y precios */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+}
+
+header h1 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.main-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0 1rem 1rem;
+}
+
+.main-nav a {
+    display: block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main-nav a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+main {
+    padding: 1rem;
+}
+
+.menu-section {
+    padding-top: 4rem; /* Espacio para que el ancla no quede oculta por el header */
+    margin-top: -3rem; /* Compensa el padding para el espaciado visual */
+    margin-bottom: 2rem;
+}
+
+.menu-section h2 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.menu-item {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    color: var(--accent-color);
+    font-size: 1.3rem !important;
+    font-weight: 700;
+    text-align: right;
+}
+
+.placeholder {
+    background-color: var(--primary-color);
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* Color oficial de WhatsApp */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.05);
+}
+
+/* Media Query para pantallas más grandes (ej. tablets) */
+@media (min-width: 768px) {
+    .main-nav {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
