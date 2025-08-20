@@ -1,10 +1,22 @@
 :root {
-    --bg-color: #0d1b2a; /* Azul oscuro casi negro */
-    --primary-color: #1b263b; /* Azul más claro para tarjetas */
-    --secondary-color: #415a77; /* Azul grisáceo para acentos */
-    --text-color: #e0e1dd; /* Blanco roto para texto */
-    --accent-color: #ffc300; /* Amarillo para títulos y precios */
+    --bg-color: #0d1b2a;
+    --primary-color: #1b263b;
+    --secondary-color: #415a77;
+    --text-color: #e0e1dd;
+    --accent-color: #ffc300;
     --body-bg: #000;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 * {
@@ -28,15 +40,17 @@ body {
 
 .phone-container {
     width: 100%;
-    max-width: 480px; /* Ancho máximo para simular un teléfono grande */
+    max-width: 480px;
     background-color: var(--bg-color);
     min-height: 100vh;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    overflow-x: hidden; /* Evita overflow horizontal */
 }
 
 header {
     text-align: center;
     padding: 2rem 1rem 1rem;
+    animation: fadeInUp 0.5s ease-out backwards;
 }
 
 header h1 {
@@ -47,30 +61,117 @@ header h1 {
 
 .main-nav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem 1rem;
+}
+
+:root {
+    --bg-color: #0d1b2a;
+    --primary-color: #1b263b;
+    --secondary-color: #415a77;
+    --text-color: #e0e1dd;
+    --accent-color: #ffc300;
+    --body-bg: #000;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+}
+
+.phone-container {
+    width: 100%;
+    max-width: 480px;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    animation: fadeInUp 0.5s ease-out backwards;
+}
+
+header h1 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.main-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding: 0 1rem 1rem;
 }
 
 .main-nav a {
-    display: flex; /* Usamos flex para centrar contenido */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 1 / 1; /* Esto crea el cuadrado perfecto */
+    aspect-ratio: 1 / 1;
     background-color: var(--primary-color);
     color: var(--text-color);
     text-decoration: none;
     text-align: center;
-    border-radius: 12px; /* Bordes más redondeados */
+    border-radius: 12px;
     font-weight: 600;
     font-size: 0.9rem;
     padding: 0.5rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: fadeInUp 0.5s ease-out backwards;
 }
+
+.main-nav a:nth-child(1) { animation-delay: 0.1s; }
+.main-nav a:nth-child(2) { animation-delay: 0.2s; }
+.main-nav a:nth-child(3) { animation-delay: 0.3s; }
+.main-nav a:nth-child(4) { animation-delay: 0.4s; }
+.main-nav a:nth-child(5) { animation-delay: 0.5s; }
+.main-nav a:nth-child(6) { animation-delay: 0.6s; }
 
 .main-nav a:hover {
     background-color: var(--secondary-color);
     transform: scale(1.05);
+}
+
+.main-nav a svg {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+}
+
+.main-nav a span {
+    display: block;
 }
 
 main {
@@ -89,17 +190,40 @@ main {
     margin-bottom: 1.5rem;
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 0.5rem;
+    animation: fadeInUp 0.5s ease-out backwards;
+    animation-delay: 0.7s;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 .menu-item {
     background-color: var(--primary-color);
-    padding: 1rem;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.5s ease-out backwards;
+    overflow: hidden; /* Para que la imagen no se salga de los bordes redondeados */
+}
+
+.menu-item-image {
+    height: 120px;
+    background-color: #2a3b52;
+}
+
+.menu-item-content {
+    padding: 1rem;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .menu-item h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--text-color);
     margin-bottom: 0.5rem;
 }
@@ -111,7 +235,178 @@ main {
 
 .price {
     color: var(--accent-color);
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
+    font-weight: 700;
+    text-align: right;
+    margin-top: auto; /* Empuja el precio hacia abajo */
+}
+
+.placeholder {
+    background-color: var(--primary-color);
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+/* --- NUEVO: Separador de secciones --- */
+.section-separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+    margin: 3rem 0;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.2s ease;
+    font-size: 0; /* Oculta el texto original */
+}
+
+.whatsapp-float::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.76.46 3.43 1.29 4.9l-1.41 5.14 5.26-1.38c1.41.78 3.02 1.23 4.77 1.23h.01c5.46 0 9.9-4.45 9.9-9.91 0-5.46-4.45-9.9-9.9-9.9zm4.22 12.3c-.24.42-.89.78-1.23.83-.3.05-.73.06-1.12-.04-.44-.11-1.06-.4-2.02-1.23-.96-.82-1.59-1.84-1.68-2.02-.09-.18-.01-.28.06-.38.07-.09.15-.15.21-.21.07-.06.11-.1.15-.18.04-.08.02-.15-.02-.28s-.68-1.63-.93-2.2c-.25-.57-.5-.49-.68-.5-.18-.01-.38-.01-.58-.01-.2 0-.51.08-.78.35-.27.27-.94.92-1.08 2.24-.14 1.32.52 2.59.61 2.77.09.18 1.18 1.88 2.88 2.62 1.7 0.74 2.38 0.89 3.02 0.83.64-.06 1.82-.74 2.08-1.44.26-.7.26-1.3.18-1.44-.08-.14-.3-.22-.54-.42z"/></svg>');
+    background-size: contain;
+}
+
+
+.whatsapp-float:hover {
+    transform: scale(1.05);
+}
+
+/* --- NUEVO: Botón Volver Arriba --- */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.back-to-top-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+@media (min-width: 520px) {
+    .whatsapp-float {
+        right: calc(50% - 240px + 20px);
+    }
+    .back-to-top-btn {
+        left: calc(50% - 240px - 70px);
+    }
+}
+
+
+.main-nav a:nth-child(1) { animation-delay: 0.1s; }
+.main-nav a:nth-child(2) { animation-delay: 0.2s; }
+.main-nav a:nth-child(3) { animation-delay: 0.3s; }
+.main-nav a:nth-child(4) { animation-delay: 0.4s; }
+.main-nav a:nth-child(5) { animation-delay: 0.5s; }
+.main-nav a:nth-child(6) { animation-delay: 0.6s; }
+
+.main-nav a:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.main-nav a svg {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+}
+
+.main-nav a span {
+    display: block;
+}
+
+main {
+    padding: 1rem;
+}
+
+.menu-section {
+    padding-top: 4rem; 
+    margin-top: -3rem; 
+    margin-bottom: 2rem;
+}
+
+.menu-section h2 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    animation: fadeInUp 0.5s ease-out backwards;
+    animation-delay: 0.7s;
+}
+
+/* --- NUEVO: Grid para los platos --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.menu-item {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.5s ease-out backwards;
+    /* --- NUEVO: Estilos para formato cuadrado --- */
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el precio hacia abajo */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.menu-item h3 {
+    font-size: 1.1rem; /* Ajustado para caber en el cuadrado */
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.menu-item p {
+    font-size: 0.8rem; /* Ajustado para caber */
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    color: var(--accent-color);
+    font-size: 1.1rem !important; /* Ajustado para caber */
     font-weight: 700;
     text-align: right;
 }
@@ -144,9 +439,8 @@ main {
     transform: scale(1.05);
 }
 
-/* Ajuste para que el botón de WhatsApp no se salga del contenedor en pantallas muy grandes */
-@media (min-width: 520px) { /* 480px del contenedor + 20px padding + 20px de seguridad */
+@media (min-width: 520px) {
     .whatsapp-float {
-        right: calc(50% - 240px + 20px); /* (mitad de pantalla) - (mitad de contenedor) + (padding derecho) */
+        right: calc(50% - 240px + 20px);
     }
 }
