@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Molle';
+    src: url('fuentes/Molle-Italic.ttf') format('truetype');
+}
+
 :root {
     --bg-color: #0d1b2a;
     --primary-color: #1b263b;
@@ -47,14 +52,17 @@ body {
     justify-content: center;
 }
 
-body:has(.info-toggle:checked) {
+body.modal-open {
     overflow: hidden;
 }
 
 .phone-container {
     width: 100%;
     max-width: 480px;
-    background-color: var(--bg-color);
+    background-image: url('image/el gran pollo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: 100vh;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     overflow-x: hidden;
@@ -62,14 +70,37 @@ body:has(.info-toggle:checked) {
 
 header {
     text-align: center;
-    padding: 2rem 1rem 1rem;
+    padding: 0 1rem; /* Eliminamos el padding superior e inferior */
     animation: fadeInUp 0.5s ease-out backwards;
+}
+
+.logo-principal {
+    width: 80%;
+    max-width: 450px;
+    display: block;
+    margin: 10px auto 0;
+}
+
+/* Estilo de logo por defecto (más pequeño, para secciones) */
+header img {
+    width: 64%; /* 80% del tamaño del logo principal */
+    max-width: 360px; /* 80% del tamaño del logo principal */
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Estilo de logo para la página principal (más grande) */
+.home header img {
+    width: 80%;
+    max-width: 450px;
 }
 
 header h1 {
     color: var(--accent-color);
     font-size: 2.5rem;
     font-weight: 700;
+    margin-top: 10px; /* Añadimos un pequeño margen superior para separar del logo */
+    margin-bottom: 0;
 }
 
 .main-nav {
@@ -91,7 +122,7 @@ header h1 {
     text-align: center;
     border-radius: 12px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.35rem;
     padding: 0.5rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
     animation: fadeInUp 0.5s ease-out backwards;
@@ -109,6 +140,11 @@ header h1 {
     transform: scale(1.05);
 }
 
+.main-nav-icon {
+    width: 96px;
+    height: 96px;
+}
+
 .main-nav a svg {
     width: 36px;
     height: 36px;
@@ -117,6 +153,7 @@ header h1 {
 
 .main-nav a span {
     display: block;
+    font-family: 'Molle', cursive;
 }
 
 main {
@@ -303,6 +340,57 @@ main {
 .back-to-top-btn:hover {
     background-color: var(--accent-color);
     transform: translateY(-3px);
+}
+
+.back-button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.back-button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.diet-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.vegan-icon {
+    stroke: #2ECC71; /* Green */
+}
+
+.vegetarian-icon {
+    stroke: #E74C3C; /* Red */
+}
+
+.search-container {
+    padding: 0 1rem 1rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
 }
 
 @media (min-width: 520px) {

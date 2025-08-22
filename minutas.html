@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Minutas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d1b2a">
+</head>
+<body>
+    <div class="phone-container">
+        <header>
+            <a href="index.html" class="back-button">← Volver</a>
+            <h1>Minutas</h1>
+            <p>Nuestras minutas y platos rápidos</p>
+        </header>
+
+        <main role="main">
+            <section id="minutas" class="menu-section">
+                <div class="menu-grid">
+                    
+                    <div class="menu-item">
+                        <input type="checkbox" id="mn1" class="info-toggle">
+                        <label for="mn1" class="menu-item-label">
+                            <div class="menu-item-image" alt="Minuta 1"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="mn1" class="modal-close-btn">×</label>
+                                <h3>Minuta 1</h3>
+                                <p>Descripción de la minuta.</p>
+                                <p class="price">$1500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="mn2" class="info-toggle">
+                        <label for="mn2" class="menu-item-label">
+                            <div class="menu-item-image" alt="Minuta 2"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="mn2" class="modal-close-btn">×</label>
+                                <h3>Minuta 2</h3>
+                                <p>Descripción de la minuta.</p>
+                                <p class="price">$1600</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="mn3" class="info-toggle">
+                        <label for="mn3" class="menu-item-label">
+                            <div class="menu-item-image" alt="Minuta 3"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="mn3" class="modal-close-btn">×</label>
+                                <h3>Minuta 3</h3>
+                                <p>Descripción de la minuta.</p>
+                                <p class="price">$1700</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="mn4" class="info-toggle">
+                        <label for="mn4" class="menu-item-label">
+                            <div class="menu-item-image" alt="Minuta 4"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="mn4" class="modal-close-btn">×</label>
+                                <h3>Minuta 4</h3>
+                                <p>Descripción de la minuta.</p>
+                                <p class="price">$1800</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="mn5" class="info-toggle">
+                        <label for="mn5" class="menu-item-label">
+                            <div class="menu-item-image" alt="Minuta 5"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="mn5" class="modal-close-btn">×</label>
+                                <h3>Minuta 5</h3>
+                                <p>Descripción de la minuta.</p>
+                                <p class="price">$1900</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="mn6" class="info-toggle">
+                        <label for="mn6" class="menu-item-label">
+                            <div class="menu-item-image" alt="Minuta 6"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="mn6" class="modal-close-btn">×</label>
+                                <h3>Minuta 6</h3>
+                                <p>Descripción de la minuta.</p>
+                                <p class="price">$2000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll('.info-toggle').forEach(toggle => {
+            toggle.addEventListener('change', () => {
+                if (toggle.checked) {
+                    document.body.classList.add('modal-open');
+                } else {
+                    document.body.classList.remove('modal-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

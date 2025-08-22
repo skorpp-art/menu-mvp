@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Bebidas con Alcohol</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d1b2a">
+</head>
+<body>
+    <div class="phone-container">
+        <header>
+            <a href="index.html" class="back-button">← Volver</a>
+            <h1>Bebidas con Alcohol</h1>
+            <p>Nuestra selección de bebidas</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar en el menú...">
+        </div>
+
+        <main role="main">
+            <section id="bebidas-con-alcohol" class="menu-section">
+                <div class="menu-grid">
+                    
+                    <div class="menu-item">
+                        <input type="checkbox" id="bca1" class="info-toggle">
+                        <label for="bca1" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida con Alcohol 1"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bca1" class="modal-close-btn">×</label>
+                                <h3>Bebida con Alcohol 1</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$1000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="bca2" class="info-toggle">
+                        <label for="bca2" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida con Alcohol 2"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bca2" class="modal-close-btn">×</label>
+                                <h3>Bebida con Alcohol 2</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$1100</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="bca3" class="info-toggle">
+                        <label for="bca3" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida con Alcohol 3"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bca3" class="modal-close-btn">×</label>
+                                <h3>Bebida con Alcohol 3</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$1200</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="bca4" class="info-toggle">
+                        <label for="bca4" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida con Alcohol 4"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bca4" class="modal-close-btn">×</label>
+                                <h3>Bebida con Alcohol 4</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$1300</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="bca5" class="info-toggle">
+                        <label for="bca5" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida con Alcohol 5"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bca5" class="modal-close-btn">×</label>
+                                <h3>Bebida con Alcohol 5</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$1400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="bca6" class="info-toggle">
+                        <label for="bca6" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida con Alcohol 6"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bca6" class="modal-close-btn">×</label>
+                                <h3>Bebida con Alcohol 6</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$1500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll('.info-toggle').forEach(toggle => {
+            toggle.addEventListener('change', () => {
+                if (toggle.checked) {
+                    document.body.classList.add('modal-open');
+                } else {
+                    document.body.classList.remove('modal-open');
+                }
+            });
+        });
+
+        const searchInput = document.getElementById('search-input');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            menuItems.forEach(item => {
+                const itemName = item.querySelector('h3').textContent.toLowerCase();
+                if (itemName.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

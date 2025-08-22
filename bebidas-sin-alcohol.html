@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Bebidas sin Alcohol</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d1b2a">
+</head>
+<body>
+    <div class="phone-container">
+        <header>
+            <a href="index.html" class="back-button">← Volver</a>
+            <h1>Bebidas sin Alcohol</h1>
+            <p>Nuestra selección de bebidas</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar en el menú...">
+        </div>
+
+        <main role="main">
+            <section id="bebidas-sin-alcohol" class="menu-section">
+                <div class="menu-grid">
+                    
+                    <div class="menu-item">
+                        <input type="checkbox" id="bsa1" class="info-toggle">
+                        <label for="bsa1" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida sin Alcohol 1"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bsa1" class="modal-close-btn">×</label>
+                                <h3>Bebida sin Alcohol 1</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="bsa2" class="info-toggle">
+                        <label for="bsa2" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida sin Alcohol 2"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bsa2" class="modal-close-btn">×</label>
+                                <h3>Bebida sin Alcohol 2</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$550</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="bsa3" class="info-toggle">
+                        <label for="bsa3" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida sin Alcohol 3"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bsa3" class="modal-close-btn">×</label>
+                                <h3>Bebida sin Alcohol 3</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$600</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="bsa4" class="info-toggle">
+                        <label for="bsa4" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida sin Alcohol 4"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bsa4" class="modal-close-btn">×</label>
+                                <h3>Bebida sin Alcohol 4</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$650</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="bsa5" class="info-toggle">
+                        <label for="bsa5" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida sin Alcohol 5"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bsa5" class="modal-close-btn">×</label>
+                                <h3>Bebida sin Alcohol 5</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$700</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="bsa6" class="info-toggle">
+                        <label for="bsa6" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bebida sin Alcohol 6"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="bsa6" class="modal-close-btn">×</label>
+                                <h3>Bebida sin Alcohol 6</h3>
+                                <p>Descripción de la bebida.</p>
+                                <p class="price">$750</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll('.info-toggle').forEach(toggle => {
+            toggle.addEventListener('change', () => {
+                if (toggle.checked) {
+                    document.body.classList.add('modal-open');
+                } else {
+                    document.body.classList.remove('modal-open');
+                }
+            });
+        });
+
+        const searchInput = document.getElementById('search-input');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            menuItems.forEach(item => {
+                const itemName = item.querySelector('h3').textContent.toLowerCase();
+                if (itemName.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

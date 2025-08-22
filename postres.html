@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Postres</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d1b2a">
+</head>
+<body>
+    <div class="phone-container">
+        <header>
+            <a href="index.html" class="back-button">← Volver</a>
+            <h1>Postres</h1>
+            <p>Nuestros postres caseros</p>
+        </header>
+
+        <main role="main">
+            <section id="postres" class="menu-section">
+                <div class="menu-grid">
+                    
+                    <div class="menu-item">
+                        <input type="checkbox" id="p1" class="info-toggle">
+                        <label for="p1" class="menu-item-label">
+                            <div class="menu-item-image" alt="Postre 1"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="p1" class="modal-close-btn">×</label>
+                                <h3>Postre 1</h3>
+                                <p>Descripción del postre.</p>
+                                <p class="price">$1200</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="p2" class="info-toggle">
+                        <label for="p2" class="menu-item-label">
+                            <div class="menu-item-image" alt="Postre 2"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="p2" class="modal-close-btn">×</label>
+                                <h3>Postre 2</h3>
+                                <p>Descripción del postre.</p>
+                                <p class="price">$1300</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="p3" class="info-toggle">
+                        <label for="p3" class="menu-item-label">
+                            <div class="menu-item-image" alt="Postre 3"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="p3" class="modal-close-btn">×</label>
+                                <h3>Postre 3</h3>
+                                <p>Descripción del postre.</p>
+                                <p class="price">$1400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="p4" class="info-toggle">
+                        <label for="p4" class="menu-item-label">
+                            <div class="menu-item-image" alt="Postre 4"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="p4" class="modal-close-btn">×</label>
+                                <h3>Postre 4</h3>
+                                <p>Descripción del postre.</p>
+                                <p class="price">$1500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="p5" class="info-toggle">
+                        <label for="p5" class="menu-item-label">
+                            <div class="menu-item-image" alt="Postre 5"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="p5" class="modal-close-btn">×</label>
+                                <h3>Postre 5</h3>
+                                <p>Descripción del postre.</p>
+                                <p class="price">$1600</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="p6" class="info-toggle">
+                        <label for="p6" class="menu-item-label">
+                            <div class="menu-item-image" alt="Postre 6"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="p6" class="modal-close-btn">×</label>
+                                <h3>Postre 6</h3>
+                                <p>Descripción del postre.</p>
+                                <p class="price">$1700</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll('.info-toggle').forEach(toggle => {
+            toggle.addEventListener('change', () => {
+                if (toggle.checked) {
+                    document.body.classList.add('modal-open');
+                } else {
+                    document.body.classList.remove('modal-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

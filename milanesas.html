@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Milanesas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d1b2a">
+</head>
+<body>
+    <div class="phone-container">
+        <header>
+            <a href="index.html" class="back-button">← Volver</a>
+            <h1>Milanesas</h1>
+            <p>Nuestras variedades de milanesas</p>
+        </header>
+
+        <main role="main">
+            <section id="milanesas" class="menu-section">
+                <div class="menu-grid">
+                    
+                    <div class="menu-item">
+                        <input type="checkbox" id="m1" class="info-toggle">
+                        <label for="m1" class="menu-item-label">
+                            <div class="menu-item-image" alt="La Clásica"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="m1" class="modal-close-btn">×</label>
+                                <h3>"La Clásica"</h3>
+                                <p>Tierna milanesa de ternera y pan rallado.</p>
+                                <p class="price">$2500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="m2" class="info-toggle">
+                        <label for="m2" class="menu-item-label">
+                            <div class="menu-item-image" alt="Napolitana"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="m2" class="modal-close-btn">×</label>
+                                <h3>Napolitana</h3>
+                                <p>Salsa de tomate, jamón y mozzarella.</p>
+                                <p class="price">$3200</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="m3" class="info-toggle">
+                        <label for="m3" class="menu-item-label">
+                            <div class="menu-item-image" alt="A Caballo"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="m3" class="modal-close-btn">×</label>
+                                <h3>A Caballo</h3>
+                                <p>Coronada con dos huevos fritos.</p>
+                                <p class="price">$2900</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="m4" class="info-toggle">
+                        <label for="m4" class="menu-item-label">
+                            <div class="menu-item-image" alt="Patagónica"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="m4" class="modal-close-btn">×</label>
+                                <h3>Patagónica</h3>
+                                <p>Cheddar, panceta y cebolla caramelizada.</p>
+                                <p class="price">$3500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="m5" class="info-toggle">
+                        <label for="m5" class="menu-item-label">
+                            <div class="menu-item-image" alt="Fugazzeta"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="m5" class="modal-close-btn">×</label>
+                                <h3>Fugazzeta</h3>
+                                <p>Rellena de mozzarella, con cebolla y orégano.</p>
+                                <p class="price">$3600</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="m6" class="info-toggle">
+                        <label for="m6" class="menu-item-label">
+                            <div class="menu-item-image" alt="Vegana"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="m6" class="modal-close-btn">×</label>
+                                <h3>Vegana<img src="image/vegetarian.svg" alt="Apto para vegetarianos" class="diet-icon vegetarian-icon"></h3>
+                                <p>A base de lentejas, sabrosa y contundente.</p>
+                                <p class="price">$2700</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll('.info-toggle').forEach(toggle => {
+            toggle.addEventListener('change', () => {
+                if (toggle.checked) {
+                    document.body.classList.add('modal-open');
+                } else {
+                    document.body.classList.remove('modal-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

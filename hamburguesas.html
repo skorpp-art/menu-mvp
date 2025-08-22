@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Hamburguesas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d1b2a">
+</head>
+<body>
+    <div class="phone-container">
+        <header>
+            <a href="index.html" class="back-button">← Volver</a>
+            <h1>Hamburguesas</h1>
+            <p>Nuestras hamburguesas caseras</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar en el menú...">
+        </div>
+
+        <main role="main">
+            <section id="hamburguesas" class="menu-section">
+                <div class="menu-grid">
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="h1" class="info-toggle">
+                        <label for="h1" class="menu-item-label">
+                            <div class="menu-item-image" alt="Burger Clásica"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="h1" class="modal-close-btn">×</label>
+                                <h3>Burger Clásica</h3>
+                                <p>Carne, lechuga, tomate y queso tybo.</p>
+                                <p class="price">$2800</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="h2" class="info-toggle">
+                        <label for="h2" class="menu-item-label">
+                            <div class="menu-item-image" alt="Bacon Fest"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="h2" class="modal-close-btn">×</label>
+                                <h3>Bacon Fest</h3>
+                                <p>Doble panceta, cheddar y salsa barbacoa.</p>
+                                <p class="price">$3400</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="h3" class="info-toggle">
+                        <label for="h3" class="menu-item-label">
+                            <div class="menu-item-image" alt="Doble Impacto"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="h3" class="modal-close-btn">×</label>
+                                <h3>Doble Impacto</h3>
+                                <p>Doble carne, doble cheddar y pepinillos.</p>
+                                <p class="price">$3800</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="h4" class="info-toggle">
+                        <label for="h4" class="menu-item-label">
+                            <div class="menu-item-image" alt="Pollo Crispy"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="h4" class="modal-close-btn">×</label>
+                                <h3>Pollo Crispy</h3>
+                                <p>Pollo frito crocante con mayonesa de hierbas.</p>
+                                <p class="price">$3100</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="h5" class="info-toggle">
+                        <label for="h5" class="menu-item-label">
+                            <div class="menu-item-image" alt="La Vegana"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="h5" class="modal-close-btn">×</label>
+                                <h3>La Vegana<img src="image/vegan.svg" alt="Apto para veganos" class="diet-icon vegan-icon"></h3>
+                                <p>Medallón de remolacha, hongos y rúcula.</p>
+                                <p class="price">$3000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <input type="checkbox" id="h6" class="info-toggle">
+                        <label for="h6" class="menu-item-label">
+                            <div class="menu-item-image" alt="La Bomba"></div>
+                        </label>
+                        <div class="modal-overlay" role="dialog" aria-modal="true">
+                            <div class="modal-content">
+                                <label for="h6" class="modal-close-btn">×</label>
+                                <h3>La Bomba</h3>
+                                <p>Carne, provoleta, morrones y huevo frito.</p>
+                                <p class="price">$4200</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.querySelectorAll('.info-toggle').forEach(toggle => {
+            toggle.addEventListener('change', () => {
+                if (toggle.checked) {
+                    document.body.classList.add('modal-open');
+                } else {
+                    document.body.classList.remove('modal-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

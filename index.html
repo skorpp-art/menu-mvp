@@ -8,265 +8,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d1b2a">
+    
 </head>
 <body>
     <div class="phone-container" id="top">
         <header>
+            <img src="image/2.png" alt="Logo del Restaurante" class="logo-principal">
             <h1>Nuestro Menú</h1>
             <p>Explora nuestras especialidades</p>
         </header>
 
         <nav class="main-nav">
-            <a href="#milanesas">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6,6.2C16.2,4.8,14.2,4,12,4C8.7,4,6,6.7,6,10c0,1.8,0.8,3.5,2,4.7V21h8v-6.3c1.2-1.2,2-2.9,2-4.7C18,8.8,17.6,7.6,17.6,6.2z"/></svg>
+                        <a href="milanesas.html">
+                <img src="image/3M.png" alt="Milanesas" class="main-nav-icon">
                 <span>Milanesas</span>
             </a>
-            <a href="#hamburguesas">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19,13v2H5v-2H19 M21,8H3v2h18V8 M19,17v2H5v-2H19 M21.2,4H2.8C2.4,4,2,4.4,2,4.8v0.3C2,5.6,2.4,6,2.8,6h18.3c0.5,0,0.8-0.4,0.8-0.8V4.8C22,4.4,21.6,4,21.2,4z M21.2,20H2.8c-0.5,0-0.8,0.4-0.8,0.8v0.3c0,0.5,0.4,0.8,0.8,0.8h18.3c0.5,0,0.8-0.4,0.8-0.8v-0.3C22,20.4,21.6,20,21.2,20z"/></svg>
+                        <a href="hamburguesas.html">
+                <img src="image/1H.png" alt="Hamburguesas" class="main-nav-icon">
                 <span>Hamburguesas</span>
             </a>
-            <a href="#minutas">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10S17.5,2,12,2z M16.2,16.2L11,13V7h1.5v5.2l4.5,2.7L16.2,16.2z"/></svg>
+                        <a href="minutas.html">
+                <img src="image/2P.png" alt="Minutas" class="main-nav-icon">
                 <span>Minutas</span>
             </a>
-            <a href="#postres">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22,12.4c0-1-0.8-1.8-1.8-1.8h-3.5c-0.5,0-1-0.2-1.3-0.6L12,6.3L8.6,10c-0.3,0.4-0.8,0.6-1.3,0.6H3.8C2.8,10.6,2,11.4,2,12.4V20h20V12.4z M4,18v-5.6h3.3l4.7-5.4l4.7,5.4H20V18H4z"/></svg>
+            <a href="postres.html">
+                <img src="image/5PO.png" alt="Postres" class="main-nav-icon">
                 <span>Postres</span>
             </a>
-            <a href="#bebidas-con-alcohol">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12,3L8,9h8L12,3z M13,10h-2v5.5c0,0.8,0.7,1.5,1.5,1.5S14,16.3,14,15.5V10z M6,9l-3,7h3.4c-0.2-0.8-0.4-1.7-0.4-2.5C6,12.1,6.2,10.5,6,9z M18,9c-0.2,1.5,0,3.1,0,4.5c0,0.8-0.2,1.7-0.4,2.5H21L18,9z"/></svg>
+                        <a href="bebidas-con-alcohol.html">
+                <img src="image/6BC.png" alt="Con Alcohol" class="main-nav-icon">
                 <span>Con Alcohol</span>
             </a>
-            <a href="#bebidas-sin-alcohol">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18,2H6v2h12V2z M17,5H7L5,21h14L17,5z M12,18c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S13.7,18,12,18z"/></svg>
+                        <a href="bebidas-sin-alcohol.html">
+                <img src="image/4BS.png" alt="Sin Alcohol" class="main-nav-icon">
                 <span>Sin Alcohol</span>
             </a>
         </nav>
 
-        <main>
-            <section id="milanesas" class="menu-section">
-                <h2>Milanesas</h2>
-                <div class="menu-grid">
-                    
-                    <div class="menu-item">
-                        <input type="checkbox" id="m1" class="info-toggle">
-                        <label for="m1" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="m1" class="modal-close-btn">×</label>
-                                <h3>"La Clásica"</h3>
-                                <p>Tierna milanesa de ternera y pan rallado.</p>
-                                <p class="price">$2500</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="m2" class="info-toggle">
-                        <label for="m2" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="m2" class="modal-close-btn">×</label>
-                                <h3>Napolitana</h3>
-                                <p>Salsa de tomate, jamón y mozzarella.</p>
-                                <p class="price">$3200</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="m3" class="info-toggle">
-                        <label for="m3" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="m3" class="modal-close-btn">×</label>
-                                <h3>A Caballo</h3>
-                                <p>Coronada con dos huevos fritos.</p>
-                                <p class="price">$2900</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="m4" class="info-toggle">
-                        <label for="m4" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="m4" class="modal-close-btn">×</label>
-                                <h3>Patagónica</h3>
-                                <p>Cheddar, panceta y cebolla caramelizada.</p>
-                                <p class="price">$3500</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="m5" class="info-toggle">
-                        <label for="m5" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="m5" class="modal-close-btn">×</label>
-                                <h3>Fugazzeta</h3>
-                                <p>Rellena de mozzarella, con cebolla y orégano.</p>
-                                <p class="price">$3600</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="m6" class="info-toggle">
-                        <label for="m6" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="m6" class="modal-close-btn">×</label>
-                                <h3>Vegana</h3>
-                                <p>A base de lentejas, sabrosa y contundente.</p>
-                                <p class="price">$2700</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <hr class="section-separator">
-
-            <section id="hamburguesas" class="menu-section">
-                <h2>Hamburguesas</h2>
-                <div class="menu-grid">
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="h1" class="info-toggle">
-                        <label for="h1" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="h1" class="modal-close-btn">×</label>
-                                <h3>Burger Clásica</h3>
-                                <p>Carne, lechuga, tomate y queso tybo.</p>
-                                <p class="price">$2800</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="h2" class="info-toggle">
-                        <label for="h2" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="h2" class="modal-close-btn">×</label>
-                                <h3>Bacon Fest</h3>
-                                <p>Doble panceta, cheddar y salsa barbacoa.</p>
-                                <p class="price">$3400</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="h3" class="info-toggle">
-                        <label for="h3" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="h3" class="modal-close-btn">×</label>
-                                <h3>Doble Impacto</h3>
-                                <p>Doble carne, doble cheddar y pepinillos.</p>
-                                <p class="price">$3800</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="h4" class="info-toggle">
-                        <label for="h4" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="h4" class="modal-close-btn">×</label>
-                                <h3>Pollo Crispy</h3>
-                                <p>Pollo frito crocante con mayonesa de hierbas.</p>
-                                <p class="price">$3100</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="h5" class="info-toggle">
-                        <label for="h5" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="h5" class="modal-close-btn">×</label>
-                                <h3>La Vegana</h3>
-                                <p>Medallón de remolacha, hongos y rúcula.</p>
-                                <p class="price">$3000</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <input type="checkbox" id="h6" class="info-toggle">
-                        <label for="h6" class="menu-item-label">
-                            <div class="menu-item-image"></div>
-                        </label>
-                        <div class="modal-overlay">
-                            <div class="modal-content">
-                                <label for="h6" class="modal-close-btn">×</label>
-                                <h3>La Bomba</h3>
-                                <p>Carne, provoleta, morrones y huevo frito.</p>
-                                <p class="price">$4200</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <hr class="section-separator">
-
-            <section id="minutas" class="menu-section">
-                <h2>Minutas</h2>
-                <p class="placeholder">Próximamente... Aquí podrás añadir tus minutas y platos rápidos.</p>
-            </section>
-
-            <hr class="section-separator">
-
-            <section id="postres" class="menu-section">
-                <h2>Postres</h2>
-                <p class="placeholder">Próximamente... Aquí podrás añadir los postres más dulces.</p>
-            </section>
-
-            <hr class="section-separator">
-
-            <section id="bebidas-con-alcohol" class="menu-section">
-                <h2>Bebidas con Alcohol</h2>
-                <p class="placeholder">Próximamente... Aquí podrás añadir tu selección de cervezas, vinos y cócteles.</p>
-            </section>
-
-            <hr class="section-separator">
-
-            <section id="bebidas-sin-alcohol" class="menu-section">
-                <h2>Bebidas sin Alcohol</h2>
-                <p class="placeholder">Próximamente... Aquí podrás añadir tus refrescos, aguas y jugos.</p>
-            </section>
+        <main role="main">
+            
         </main>
 
         <a href="https://wa.me/54911" class="floating-btn whatsapp-float" target="_blank" aria-label="Pedidos por WhatsApp"></a>
