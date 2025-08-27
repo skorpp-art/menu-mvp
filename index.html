@@ -1,62 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Digital del Restaurante</title>
+
+    <title>Fuego & Sal - Menú</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+
+    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0d1b2a">
-    
+    <meta name="theme-color" content="#362F2E">
+    <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+
 </head>
 <body>
-    <div class="phone-container" id="top">
-        <header>
-            <img src="image/2.png" alt="Logo del Restaurante" class="logo-principal">
-            <h1>Nuestro Menú</h1>
-            <p>Explora nuestras especialidades</p>
-        </header>
 
-        <nav class="main-nav">
-                        <a href="milanesas.html">
-                <img src="image/3M.png" alt="Milanesas" class="main-nav-icon">
-                <span>Milanesas</span>
-            </a>
-                        <a href="hamburguesas.html">
-                <img src="image/1H.png" alt="Hamburguesas" class="main-nav-icon">
-                <span>Hamburguesas</span>
-            </a>
-                        <a href="minutas.html">
-                <img src="image/2P.png" alt="Minutas" class="main-nav-icon">
-                <span>Minutas</span>
-            </a>
-            <a href="postres.html">
-                <img src="image/5PO.png" alt="Postres" class="main-nav-icon">
-                <span>Postres</span>
-            </a>
-                        <a href="bebidas-con-alcohol.html">
-                <img src="image/6BC.png" alt="Con Alcohol" class="main-nav-icon">
-                <span>Con Alcohol</span>
-            </a>
-                        <a href="bebidas-sin-alcohol.html">
-                <img src="image/4BS.png" alt="Sin Alcohol" class="main-nav-icon">
-                <span>Sin Alcohol</span>
-            </a>
-        </nav>
+    <header class="header">
+        <div class="header__logo">
+            <h1>Fuego & Sal</h1>
+            <p>Cocina de Mercado</p>
+        </div>
+        <div class="header__actions">
+            <button id="lang-es" class="lang-button active">ES</button>
+            <button id="lang-en" class="lang-button">EN</button>
+        </div>
+    </header>
 
-        <main role="main">
-            
-        </main>
+    <main id="menu-container" class="menu-container">
+        <!-- El menú se generará aquí con JavaScript -->
+    </main>
 
-        <a href="https://wa.me/54911" class="floating-btn whatsapp-float" target="_blank" aria-label="Pedidos por WhatsApp"></a>
-        <a href="#top" class="floating-btn back-to-top-btn" aria-label="Volver arriba">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.41,15.41L12,10.83l4.59,4.58L18,14l-6-6l-6,6L7.41,15.41z"/>
-            </svg>
-        </a>
-    </div>
+    <footer class="footer">
+        <p>Hecho con ❤️ para Fuego & Sal</p>
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => console.log('Service Worker registrado con éxito:', registration.scope))
+                    .catch(error => console.log('Error al registrar el Service Worker:', error));
+            });
+        }
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,175 @@
+
+{
+  "categories": [
+    {
+      "name": {
+        "es": "Para Empezar",
+        "en": "Starters"
+      },
+      "items": [
+        {
+          "id": "PUL-001",
+          "classification": "Puzzle",
+          "tags": {
+            "es": "⭐ RECOMENDADO",
+            "en": "⭐ RECOMMENDED"
+          },
+          "name": {
+            "es": "Pulpo a la Brasa con Parmentier",
+            "en": "Grilled Octopus with Parmentier"
+          },
+          "description": {
+            "es": "Pata de pulpo de roca cocida a baja temperatura y marcada a fuego vivo en nuestra brasa de encina. Reposa sobre un sedoso parmentier de patata y pimentón de la Vera.",
+            "en": "Rock octopus leg cooked at low temperature and seared on our oak grill. It rests on a silky potato and paprika parmentier."
+          },
+          "price": 22,
+          "image": "img/pulpo.jpg",
+          "upsell": {
+            "es": "Ideal con nuestro Albariño Rías Baixas.",
+            "en": "Pairs perfectly with our Albariño Rías Baixas."
+          }
+        },
+        {
+          "id": "CRO-001",
+          "classification": "Workhorse",
+          "name": {
+            "es": "Croquetas de Jamón Ibérico (8 uds)",
+            "en": "Iberian Ham Croquettes (8 units)"
+          },
+          "description": {
+            "es": "Cremosas croquetas caseras de jamón ibérico de bellota, crujientes por fuera y líquidas por dentro.",
+            "en": "Creamy homemade Iberian ham croquettes, crispy on the outside and liquid on the inside."
+          },
+          "price": 12,
+          "upsell": {
+            "es": "Prueba nuestro mix (4 de jamón, 4 de boletus) por 1 más.",
+            "en": "Try our mix (4 ham, 4 mushroom) for 1 more."
+          }
+        },
+        {
+          "id": "BRA-001",
+          "classification": "Workhorse",
+          "name": {
+            "es": "Patatas Bravas de la Casa",
+            "en": "House 'Patatas Bravas'"
+          },
+          "description": {
+            "es": "Patatas confitadas y fritas, con alioli suave y nuestra salsa brava ligeramente picante.",
+            "en": "Confit and fried potatoes, with a smooth aioli and our slightly spicy 'brava' sauce."
+          },
+          "price": 8,
+          "upsell": {
+            "es": "Añade un extra de chistorra a la brasa por 3.",
+            "en": "Add extra grilled chistorra sausage for 3."
+          }
+        },
+        {
+          "id": "TAC-001",
+          "classification": "Workhorse",
+          "tags": {
+            "es": "🌶️ PICANTE",
+            "en": "🌶️ SPICY"
+          },
+          "name": {
+            "es": "Taco de Cochinita Pibil (1 ud)",
+            "en": "Cochinita Pibil Taco (1 unit)"
+          },
+          "description": {
+            "es": "Carne de cerdo marinada en achiote y naranja, cocinada a baja temperatura y servida con cebolla encurtida.",
+            "en": "Pork marinated in achiote and orange, slow-cooked and served with pickled onions."
+          },
+          "price": 5,
+          "upsell": {
+            "es": "Pide tu trío por 13 y ahorra.",
+            "en": "Order a trio for 13 and save."
+          }
+        },
+        {
+          "id": "ENS-001",
+          "classification": "Dog",
+          "name": {
+            "es": "Ensalada Mixta Simple",
+            "en": "Simple Mixed Salad"
+          },
+          "description": {
+            "es": "Lechuga, tomate y cebolla.",
+            "en": "Lettuce, tomato, and onion."
+          },
+          "price": 10
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Principales",
+        "en": "Main Courses"
+      },
+      "items": [
+        {
+          "id": "HAM-001",
+          "classification": "Star",
+          "tags": {
+            "es": "🔥 MÁS VENDIDO",
+            "en": "🔥 BEST SELLER"
+          },
+          "name": {
+            "es": "Hamburguesa 'Fuego & Sal'",
+            "en": "'Fuego & Sal' Burger"
+          },
+          "description": {
+            "es": "Nuestra joya. 200g de chuletón madurado picado a cuchillo, sellado a la brasa, con queso havarti fundido, panceta ibérica crujiente y nuestra emulsión secreta de chiles ahumados. Servida en pan brioche de mantequilla.",
+            "en": "Our jewel. 200g of hand-chopped aged ribeye, grilled to perfection, with melted havarti cheese, crispy Iberian bacon, and our secret smoked chili emulsion. Served on a butter brioche bun."
+          },
+          "price": 18,
+          "image": "img/hamburguesa.jpg",
+          "upsell": {
+            "es": "Maridaje perfecto con nuestra cerveza artesanal IPA por 5 más.",
+            "en": "Perfectly paired with our craft IPA beer for 5 more."
+          }
+        },
+        {
+          "id": "SOL-001",
+          "classification": "Puzzle",
+          "name": {
+            "es": "Solomillo de Ternera (200g)",
+            "en": "Beef Tenderloin (200g)"
+          },
+          "description": {
+            "es": "Corazón de solomillo de ternera gallega cocinado a tu gusto en la brasa, napado con una reducción de vino Pedro Ximénez y acompañado de patatas baby asadas.",
+            "en": "Heart of Galician beef tenderloin grilled to your liking, glazed with a Pedro Ximénez wine reduction and served with roasted baby potatoes."
+          },
+          "price": 28,
+          "upsell": {
+            "es": "Añade nuestro puré de patata trufado por 4.",
+            "en": "Add our truffled potato purée for 4."
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "es": "Postres",
+        "en": "Desserts"
+      },
+      "items": [
+        {
+          "id": "TAR-001",
+          "classification": "Workhorse",
+          "name": {
+            "es": "Tarta de Queso Cremosa",
+            "en": "Creamy Cheesecake"
+          },
+          "description": {
+            "es": "Nuestra famosa tarta de queso al horno, cremosa y con un toque de queso azul. Servida con coulis de frutos rojos.",
+            "en": "Our famous baked cheesecake, creamy with a hint of blue cheese. Served with a red berry coulis."
+          },
+          "price": 9,
+          "upsell": {
+            "es": "Añade una bola de helado artesanal de vainilla por 2.",
+            "en": "Add a scoop of artisanal vanilla ice cream for 2."
+          }
+        }
+      ]
+    }
+  ]
+}
